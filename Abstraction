@@ -1,0 +1,41 @@
+using System;
+
+abstract class Shape                       {
+    public string Name { get; set; }      
+
+    public void ShowName()                {
+        Console.WriteLine($"Shape: {Name}");
+    }
+
+    public abstract double Area();       
+}
+
+class Circle : Shape{
+    public double Radius { get; set; }
+
+    public override double Area(){
+        return 3.14 * Radius * Radius;
+    }
+}
+
+class Rectangle : Shape{
+    public double Width { get; set; }
+    public double Height { get; set; }
+
+    public override double Area(){
+        return Width * Height;
+    }
+}
+
+class Program{
+    static void Main(){
+
+        Circle c = new Circle { Name = "Circle", Radius = 5 };
+        c.ShowName();
+        Console.WriteLine(c.Area());    
+
+        Rectangle r = new Rectangle { Name = "Rectangle", Width = 4, Height = 6 };
+        r.ShowName();
+        Console.WriteLine(r.Area());      
+    }
+}
