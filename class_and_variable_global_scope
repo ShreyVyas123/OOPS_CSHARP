@@ -1,0 +1,65 @@
+class BankAccount{
+    private string accholder;
+    private double balance;
+    
+    public void SetData(string a , double b){
+        accholder = a;
+        balance = b;
+    }
+    
+    public void Deposit(double amount){
+        Console.WriteLine(amount + balance);
+    }
+    
+    public void Withdraw(double amount){
+        if(amount > balance){
+            Console.WriteLine("Insufficient Bank Balance...");
+        }
+        else{
+            Console.WriteLine(balance - amount);
+        }
+    }
+    
+    class Program{
+        static void Main(){
+            BankAccount b1 = new BankAccount();
+            BankAccount b2 = new BankAccount();
+            
+            b1.SetData("ABC",20000);
+            b1.Deposit(2000);
+            b2.SetData("BCD",30000);
+            b2.Withdraw(40000);
+            
+        }
+    }
+}
+
+
+
+#student
+
+class student{
+    private string name;
+    private int marks;
+    
+    public void setData(string n,int m){
+        name = n;
+        marks = m;
+    }
+    public void ShowInfo(){
+        Console.WriteLine($"{name} got this much marks {marks}");
+    }
+}
+
+class program{
+    static void Main(){
+        student stu1 = new student();
+        stu1.setData("ABC" , 78);
+        student stu2 = new student();
+        stu2.setData("BCD" , 87);
+        
+        stu1.ShowInfo();
+        stu2.ShowInfo();
+        
+    }
+}
