@@ -1,0 +1,30 @@
+class Student{
+    private int marks;
+    
+    public int Marks{
+        get{
+            return marks;
+        }
+        set{
+            if(value >=0 && value <= 100){
+                marks = value;
+                Console.WriteLine("Jorrdarrr...");
+            }
+            else{
+                Console.WriteLine("Harkha marks nakho ne saheb...");
+            }
+        }
+    }
+}
+
+class Program{
+    static void Main(){
+        Student s1 = new Student();
+        Student s2 = new Student();
+        
+        s1.Marks = 77;
+        Console.WriteLine(s1.Marks);
+        s2.Marks = 78;
+        Console.WriteLine(s2.Marks);
+    }
+}
