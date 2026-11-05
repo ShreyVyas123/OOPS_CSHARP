@@ -1,0 +1,28 @@
+using System;
+
+class Student{
+    private int age;
+
+    public int Age{
+        get{
+            return age;
+        }
+
+        set{
+            if (value > 25){
+                age = value;
+            }
+            else{
+                Console.WriteLine("Not eligible to vote...");
+            }
+        }
+    }
+}
+
+class Program{
+    static void Main(){
+        Student s1 = new Student();
+        s1.Age = 27;
+        Console.WriteLine(s1.Age);
+    }
+}
