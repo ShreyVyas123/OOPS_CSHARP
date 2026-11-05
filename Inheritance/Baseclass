@@ -1,0 +1,23 @@
+using System;
+
+class Sports{
+    public string gamename;
+    
+    public void game(){
+        Console.WriteLine("They are playing football...");
+    }
+}
+
+class Players:Sports{
+    public void game(){
+        Console.WriteLine("They love playing football...");
+        base.game();
+    }
+}
+
+class Program{
+    static void Main(){
+        Players p1 = new Players();
+        p1.game();
+    }
+}
