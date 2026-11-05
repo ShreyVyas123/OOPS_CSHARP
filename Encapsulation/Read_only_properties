@@ -1,0 +1,19 @@
+using System;
+
+class Student{
+    public string name{get;}
+    
+    public Student(string name){
+        this.name = name;
+    }
+    public void display(){
+        Console.WriteLine(name);
+    }
+}
+
+class Program{
+    static void Main(){
+        Student s1 = new Student("ABC");
+        s1.display();
+    }
+}
