@@ -1,0 +1,18 @@
+using System;
+
+class Employee{
+    public Employee(){
+        Console.WriteLine("Employee is working...");
+    }
+}
+class Manager:Employee{
+    public Manager(){
+        Console.WriteLine("Manager is working...");
+    }
+}
+
+class Program{
+    static void Main(){
+        Manager m1 = new Manager();
+    }
+}
