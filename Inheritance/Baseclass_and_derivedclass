@@ -1,0 +1,24 @@
+using System;
+
+class Employee{
+    public string name = "ABC";
+    
+    public void working(){
+        Console.WriteLine(name + "is working...");
+    }
+}
+
+class Salary:Employee{
+    public void salary(){
+        Console.WriteLine("He got is salary...");
+    } 
+}
+
+class Program{
+    static void Main(){
+        Salary s1 = new Salary();
+        Console.WriteLine(s1.name);
+        s1.working();
+        s1.salary();
+    }
+}
